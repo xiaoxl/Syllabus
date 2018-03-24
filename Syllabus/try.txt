@@ -1,0 +1,53 @@
+
+
+\question[10]
+
+Determine the convergence or divergence for the \textbf{sequence}. If convergent, evaluate the limit.
+
+
+\begin{solution}
+
+First note that $\sin(n\pi)=0$ for any $n$. So \[a_n=\frac{n\ln n}{n+10}.\]
+Then since \[\lim_{n\rightarrow\infty}\frac{n\ln n}{n+10}=\lim_{n\rightarrow\infty}\frac{\frac{n\ln n}{n}}{\frac{n+10}{n}}=\lim_{n\rightarrow\infty}\frac{\ln n}{1+\frac{10}{n}}=\infty,\]
+the sequence is divergent.
+
+{\color{red}\bigskip NOTE that since the limit does not exist, by Remark 8.1.12 (page 8 of Note 8.1), we don't know the relation between the limits of the sequence $\displaystyle\frac{n\ln n}{n+10}$ and that of the function $\displaystyle\frac{x\ln x}{x+10}$. Therefore we CANNOT turn to compute the limit of the function $\displaystyle\frac{x\ln x}{x+10}$ and use L'Hospital's Rule to solve it. It is wrong if you try to use L'Hospital's Rule even if it would give the same answer.  }
+
+\end{solution}
+
+
+
+\question[10]
+
+Determine the convergence or divergence for the \textbf{series}. If convergent, evaluate the limit.
+\[\sum_{n=2}^{\infty}\ln\left(\frac{n+1}{n}\right)\]
+
+\begin{solution}
+
+Let $\displaystyle b_n=\ln\left(\frac{n+1}{n}\right)=\ln(n+1)-\ln(n)$. Compute the first few partial sums:
+\[\begin{split}
+    s_2&=b_2=\ln3-\ln2,\\
+    s_3&=s_2+b_3=\ln3-\ln2+\ln4-\ln3=\ln4-\ln2,\\
+    s_4&=s_3+b_4=\ln4-\ln2+\ln5-\ln4=\ln5-\ln2\ldots
+\end{split}\]
+From the pattern, we have\[s_n=\ln(n+1)-\ln2.\]
+Then the sum \[s=\lim_{n\rightarrow\infty}s_n=\lim_{n\rightarrow\infty}\ln(n+1)-\ln2=\infty.\]
+So the series is divergent.
+
+\end{solution}
+
+
+
+\question[10]
+
+Determine the convergence or divergence for the \textbf{series}. If convergent, evaluate the limit.
+\[\sum_{n=1}^{\infty}\frac{3^n}{n!}\]
+
+\begin{solution}
+
+The series can be gotten by plug $x=3$ into the Taylor series expansion\[e^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}.\]
+Since $x=3$ is inside the interval of convergence, $\sum_{n=0}^{\infty}\frac{3^n}{n!}$ is convergent and the sum is $e^3$. Therefore the series $\sum_{n=1}^{\infty}\frac{3^n}{n!}$ is convergent and the sum is
+\[\sum_{n=1}^{\infty}\frac{3^n}{n!}=\sum_{n=0}^{\infty}\frac{3^n}{n!}-\frac{3^0}{0!}=e^3-1.\]
+
+\end{solution}
+

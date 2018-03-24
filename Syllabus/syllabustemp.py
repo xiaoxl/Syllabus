@@ -10,6 +10,7 @@ from datetime import date
 from datetime import datetime
 from datetime import timedelta
 
+import re
 from random import randint
 
 def outputdate(date):
@@ -142,9 +143,13 @@ with doc.create(Tabular(fmt)) as data_table:
         day=day+oneday*2
 
 
+with open('try.txt','r') as file:
+    dataa=file.read()
 
 
-
+# ans=re.findall(r'\\begin{solution}(.*?)\\end{solution}',dataa,re.S)
+#
+# doc.append(NoEscape(ans[0]))
 
 
 

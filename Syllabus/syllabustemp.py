@@ -70,11 +70,11 @@ doc.packages.append(Command('renewcommand',Arguments(Command('baselinestretch'),
 classname=r'MATH 10B: Calculus of Several Variables II'
 classquarter=r'Spring'
 classyear=r'2018'
-firstday=date(2018,4,2)
+firstday=date(2018,10,1)
 oneday=timedelta(days=1)
 # oneweek=timedelta(weeks=1)
 
-holiday=[date(2018,5,28)]
+holiday=[date(2018,11,12),date(2018,11,22),date(2018,11,23)]
 
 num_of_col=3
 fmt = '|l'*num_of_col+'|'
@@ -129,7 +129,7 @@ with doc.create(Tabular(fmt)) as data_table:
 
                 row=[firstcol,secondcol,thirdcol]
                 data_table.add_row(row)
-            elif day.weekday()==3:
+            elif day.weekday()==1:
                 if day not in holiday:
                     secondcol=NoEscape(discussiondata[disindex])
                     disindex=disindex+1
@@ -143,8 +143,8 @@ with doc.create(Tabular(fmt)) as data_table:
         day=day+oneday*2
 
 
-with open('try.txt','r') as file:
-    dataa=file.read()
+# with open('try.txt','r') as file:
+#     dataa=file.read()
 
 
 # ans=re.findall(r'\\begin{solution}(.*?)\\end{solution}',dataa,re.S)
